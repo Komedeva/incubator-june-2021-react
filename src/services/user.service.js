@@ -1,7 +1,9 @@
 function getUsers() {
 return fetch('https://jsonplaceholder.typicode.com/users')
-    .then(value=> value.json());
-
+    .then(value=> {
+        value.json();
+        console.log('fffff');
+    });
 }
 
 function getUser(id){

@@ -12,13 +12,13 @@ export default function Users(){
         getUsers().then(value => setUsers([...value]));
     }, []);
 
+    console.log(users[0]);
+
     return (
         <div>
-            <User user={users[0]}/>
-            <User user={users[1]}/>
-            <User user={users[2]}/>
 
-            <User user={users[4]}/>
+            {/*<User user={{a: 1, b: 2, c: 3}}/>*/}
+            <User user={users[0]}/>
 
         </div>
     );

@@ -1,7 +1,8 @@
 export function User({user}){
+    console.log(user);
     return(
         <div>
-            {user.id} {user.name}
+            {user.id}
         </div>
     )
 }
