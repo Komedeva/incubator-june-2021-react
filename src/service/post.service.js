@@ -1,8 +1,7 @@
-function getPosts() {
-    return fetch('https://jsonplaceholder.typicode.com/posts')
+
+function getCommentsOfPost(id){
+    return fetch('https://jsonplaceholder.typicode.com/posts/'+id+'/comments')
         .then(value=> value.json());
 }
-function getPost(id){
-    return fetch('https://jsonplaceholder.typicode.com/posts/'+id)
-        .then(value=> value.json());
-}
+
+export {getCommentsOfPost}
