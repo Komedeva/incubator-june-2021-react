@@ -1,6 +1,6 @@
-export function User({user}){
-    console.log(user);
-    return(
+
+export function User({user}) {
+    return (
         <div>
             <h1>{user.id} {user.name} {user.username}</h1>
             <p>Email:{user.email}</p>
