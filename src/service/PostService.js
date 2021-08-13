@@ -5,7 +5,6 @@ const getPosts = () => {
         .then(value => value.json());
 
 }
-
 const getPost = (id) => {
     return fetch(url + '/' + id)
         .then(value => value.json());
