@@ -19,7 +19,10 @@ export default function Posts() {
     return (
         <div className={'posts'}>
             <div>
-            {posts && posts.map(value => <Post key={value.id} post={value} choosePost={choosePost}/>)}
+            {posts && posts.map(value =>
+                <Post key={value.id}
+                      post={value}
+                      choosePost={choosePost}/>)}
             </div>
             {
                 post && <div>
