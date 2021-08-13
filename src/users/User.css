@@ -1,0 +1,7 @@
+.userBox{
+    border: solid;
+}
+.users{
+    display: flex;
+    padding: 50px;
+}

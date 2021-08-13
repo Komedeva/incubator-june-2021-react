@@ -11,7 +11,8 @@ export  function Post ({post}){
 
     return(
         <div>
-            <h5>{post.id} {post.userId} {post.title}</h5>
+            <h3> <b>Posts:</b>
+                {post.id} {post.userId} {post.title}</h3>
             <p>{post.body}</p>
             <div>
                 {
