@@ -1,7 +1,9 @@
+import Users from "./users/users";
+
 export default function App() {
   return (
     <div>
-      App
+      <Users/>
     </div>
   );
 }

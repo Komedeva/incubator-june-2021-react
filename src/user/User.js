@@ -1,18 +1,6 @@
-import {useEffect} from "react";
-// import {getUsers} from "../service/user-post"
-import {getPostOfUser} from "../service/user-post";
-import {useState} from "react";
-
-
-
-export function User({user}) {
-    const [posts, setPosts] = useState();
-    useEffect(() => {
-        getPostOfUser(user.id).then(value => setPosts(value))
-    }, [])
-
+export default function User({user, chooseUser}) {
     return (
-        <div className='userBox'>
+        <div>
             <h1>{user.id} {user.name} {user.username}</h1>
             <p>Email:{user.email}</p>
             <p>Phone:{user.phone}</p>
@@ -29,11 +17,9 @@ export function User({user}) {
             <p>lat:{user.address.geo.lat}</p>
             <p>lng:{user.address.geo.lng}</p>
 
-            <div>
-                {
-                    posts && posts.map(value => <Post post={value} key={value.id}/>)
-                }
-            </div>
+            <button onClick={() => {
+                chooseUser(user)
+            }}> details</button>
         </div>
-    )
+    );
 }

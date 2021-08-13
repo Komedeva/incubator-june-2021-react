@@ -1,11 +1,21 @@
-function getUsers() {
-    return fetch('https://jsonplaceholder.typicode.com/users')
-        .then(value=> value.json());
+const url = 'https://jsonplaceholder.typicode.com/users'
+
+const getUsers = () => {
+    return fetch(url)
+        .then(value => value.json());
+
 }
 
-function getPostOfUser(id){
-    return fetch('https://jsonplaceholder.typicode.com/users/'+id+'/posts')
-        .then(value=> value.json());
+const getUser = (id) => {
+    return fetch(url + '/' + id)
+        .then(value => value.json());
+
 }
 
-export {getUsers, getPostOfUser};
+
+const getPostOfUser = (id)=>{
+    return fetch (url + '/' + id + '/posts')
+        .then(value => value.json());
+}
+
+export {getUser, getUsers, getPostOfUser}

@@ -1,0 +1,13 @@
+.users-wrap{
+    display: flex;
+    width: 100%;
+    padding:20px ;
+    border: solid;
+    border-color: darkseagreen;
+}
+.posts{
+    padding: 30px;
+    border: solid;
+    border-color: darkseagreen;
+    width: 50%;
+}
