@@ -1,7 +1,9 @@
+import ControlledForm from './components/controlledform/ControlledForm';
+
 export default function App() {
-  return (
-    <div>
-      App
-    </div>
-  );
+    return (
+        <div>
+            <ControlledForm/>
+        </div>
+    );
 }
