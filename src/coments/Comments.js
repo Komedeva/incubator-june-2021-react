@@ -3,7 +3,6 @@ import {useEffect, useState} from "react";
 import {Comment} from "./Comment";
 import {CommentsDetails} from './CommentsDetails';
 
-
 export default function Comments() {
     const [comments, setComments] = useState([]);
     const [comment, setComment] = useState(null);
