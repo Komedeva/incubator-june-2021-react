@@ -10,8 +10,7 @@ const car1 = ({model: model, price: price, year: year}) => {
             'Content-type': 'application/json; charset=UTF-8',
         },
     })
-        .then((response) => response.json())
-        .then((json) => console.log(json));
+        .then((response) => response.json());
 }
 
 
@@ -22,7 +21,6 @@ function getCars() {
 
 
 function carPatch({model, price, year}, id) {
-    console.log(model);
     return fetch('http://195.72.146.25/api/v1/cars/' + id, {
         method: 'PUT',
         body: JSON.stringify({
@@ -33,7 +31,6 @@ function carPatch({model, price, year}, id) {
         },
     })
         .then((response) => response.json())
-        .then((json) => json);
 }
 
 
