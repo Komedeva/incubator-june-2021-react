@@ -1,32 +1,22 @@
 import {useEffect, useState} from "react";
 import {car1, getCars} from "../cars.service/CarService";
 // import './Carstyle.css'
-// import {deleteCar} from './../cars.service';
-import {carPatch} from './../cars.service/CarService'
+import {carDelete, carPatch} from "../cars.service/CarService";
 
 export default function ControlledForm() {
     let [model, setModel] = useState('');
     let [price, setPrice] = useState('');
     let [year, setYear] = useState('');
-    let [car, setCar] = useState({model: '', price: '', year: ''});
     let [cars, setCars] = useState([]);
-    let [carpatch, setcarpatch]= useState('');
-
 
     useEffect(() => {
-        getCars().then(value => setCars([...value]))
-    })
+        getCars().then(value => setCars(value))
+    }, [cars])
 
-
-    useEffect(()=>{
-        carPatch().then(value => setcarpatch([...value]))
-    })
 
     const onsubmitContForm = (e) => {
         e.preventDefault();
-
         let tempCar = {model, price, year}
-        setCar({...tempCar})
         car1(tempCar).then(value => console.log(value));
     }
 
@@ -42,11 +32,25 @@ export default function ControlledForm() {
         setYear(e.target.value);
     }
 
-    return (
-        <div>
+    const onEditCar = (id) => {
+        carPatch({model, price, year}, id);
+        setCars([...cars]);
+        setModel('');
+        setPrice('');
+        setYear('');
+    }
 
+    const DeleteCar = (id) => {
+        carDelete(id);
+    }
+
+    return (
+        <div style={{display: "flex", flexDirection: "column-reverse"}}>
             {cars.map(value => <div className='Carmodel'
-                                    key={value.id}> Model: {value.model}, Price: {value.price}, Year: {value.year}</div>)}
+                                    key={value.id}> Model: {value.model}, Price: {value.price}, Year: {value.year}
+                <button onClick={() => onEditCar(value.id)}>Edit</button>
+                <button onClick={() => DeleteCar(value.id)}>Delete</button>
+            </div>)}
 
             <form onSubmit={onsubmitContForm}>
                 <input type="text" name={model} value={model} onInput={onInputChangeModel}/>
