@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {car1, getCars} from "../cars.service/CarService";
 import './../carstyle.css';
-import {carDelete, carPatch} from "../cars.service/CarService";
+import {carDelete, carPut} from "../cars.service/CarService";
 
 export default function ControlledForm() {
     let [model, setModel] = useState('');
@@ -13,7 +13,6 @@ export default function ControlledForm() {
     useEffect(() => {
         getCars().then(value => setCars(value));
     }, [checkCar]);
-
 
     const onsubmitContForm = (e) => {
         e.preventDefault();
@@ -38,7 +37,7 @@ export default function ControlledForm() {
     }
 
     const onEditCar = (id) => {
-        carPatch({model, price, year}, id)
+        carPut({model, price, year}, id)
             .then((json) => {
                 console.log(json);
                 setCheckCar(json);
@@ -48,24 +47,46 @@ export default function ControlledForm() {
     const DeleteCar = (id) => {
         carDelete(id);
 
-        setCars(cars.filter((item)=> item.id !== id));
+        setCars(cars.filter((item) => item.id !== id));
     }
 
     return (
-        <div className='cars' style={{display: "flex", flexDirection: "column-reverse"}}>
-            {cars.map(value => <div className='Carmodel'
-                                    key={value.id}> Id: {value.id} Model: {value.model}, Price: {value.price},
-                Year: {value.year}
-                <button onClick={() => onEditCar(value.id)}>Edit</button>
-                <button onClick={() => DeleteCar(value.id)}>Delete</button>
-            </div>)}
+        <div className={'cars'}>
+            <div className={'carForm'}>
+                <form className={'formochka'} onSubmit={onsubmitContForm}>
+                    <div>
+                        <p>Model: </p> <input type="text" name={model} value={model} onInput={onInputChangeModel}/>
+                    </div>
 
-            <form onSubmit={onsubmitContForm}>
-                <input type="text" name={model} value={model} onInput={onInputChangeModel}/>
-                <input type="text" name={price} value={price} onInput={onInputChangePrice}/>
-                <input type="text" name={year} value={year} onInput={onInputChangeYear}/>
-                <input type="submit" value={'save'}/>
-            </form>
+                    <div>
+                        <p>Price: </p> <input type="text" name={price} value={price} onInput={onInputChangePrice}/>
+                    </div>
+
+                    <div>
+                        <p>Model: </p> <input type="text" name={year} value={year} onInput={onInputChangeYear}/>
+                    </div>
+
+                    <div>
+                        <button>Save</button>
+                    </div>
+                </form>
+            </div>
+
+            <div className={'carsInfo'}>
+                {
+                    cars.map(value =>
+                        <div className={'carModel'} key={value.id}>
+                            <p><b>Id:</b> {value.id},</p>
+                            <p><b>Model:</b> {value.model},</p>
+                            <p><b>Price:</b> {value.price},</p>
+                            <p><b>Year:</b> {value.year}</p>
+
+                            <button onClick={() => onEditCar(value.id)}>Edit</button>
+                            <button onClick={() => DeleteCar(value.id)}>Delete</button>
+                        </div>
+                    )
+                }
+            </div>
         </div>
     )
 }

@@ -20,7 +20,7 @@ function getCars() {
 }
 
 
-function carPatch({model, price, year}, id) {
+function carPut({model, price, year}, id) {
     return fetch('http://195.72.146.25/api/v1/cars/' + id, {
         method: 'PUT',
         body: JSON.stringify({
@@ -41,4 +41,4 @@ function carDelete(id) {
 }
 
 
-export {car1, getCars, carPatch, carDelete}
+export {car1, getCars, carPut, carDelete}

@@ -1,4 +1,43 @@
-/*.column{*/
-/*    display: flex */
-/*    flexDirection:column-reverse*/
-/*}*/
+.cars{
+    background-color: #b4e2db;
+}
+.carModel p {
+    width: 180px;
+
+}
+.carModel{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.carForm{
+    display: flex;
+    justify-content: center;
+}
+.formochka {
+    display: flex;
+    flex-flow: column;
+}
+.formochka input{
+    width: 700px;
+}
+
+.formochka > div {
+    display: flex;
+    padding-left: 20px ;
+    margin-bottom: 10px;
+}
+.formochka p{
+    width: 50px;
+    text-align: right;
+    margin-right:10px ;
+}
+.formochka button{
+  width: 500px;
+
+}
+
+.formochka > div {
+    display: flex;
+    justify-content: center;
+}
