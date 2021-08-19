@@ -1,0 +1,25 @@
+
+.link {
+    padding-left: 47%;
+}
+
+.userPage > div {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+}
+
+.user {
+    width: 32%;
+    border: 1px solid cornflowerblue;
+    padding-left: 5px;
+}
+
+.post {
+    border: 1px solid cornflowerblue;
+    padding-left: 5px;
+}
+.comment{
+    border: 1px solid cornflowerblue;
+    padding-left: 5px;
+}
