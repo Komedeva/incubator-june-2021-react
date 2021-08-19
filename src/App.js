@@ -1,4 +1,5 @@
 import {BrowserRouter as Router, Switch, Link, Route, withRouter } from "react-router-dom";
+import {User} from "./user/User";
 
 
 export default function App() {
@@ -15,7 +16,7 @@ export default function App() {
     </div>
       <div>
           <Route path={'/usersPage'}></Route>
-          <h2></h2>
+      <User/>
       </div>
       </Router>
   );
