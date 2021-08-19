@@ -8,9 +8,3 @@ export default function ControlledForm() {
     let [year, setYear] = useState('');
     let [cars, setCars] = useState([]);
 }
-
-function getCar(e){
-return(
-
-)
-}
