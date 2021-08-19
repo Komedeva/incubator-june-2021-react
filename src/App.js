@@ -1,8 +1,7 @@
-import Carlink from "./car/Cars";
-import {
-    BrowserRouter as Router, Route, Link, Switch
+import {CarsEven} from "./car/CarsEven";
+import {CarsOdd} from "./car/CarOdd";
+import {BrowserRouter as Router, Route, Link, Switch
 } from "react-router-dom";
-import {Cars} from "./car/Cars";
 
 export default function App() {
     return (

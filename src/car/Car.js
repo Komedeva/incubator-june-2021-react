@@ -1,10 +1,10 @@
- export function Car (){
+ export function Car ({car}){
     return(
-        <div className={'carModel'} key={value.id}>
-            <p><b>Id:</b> {value.id}</p>
-            <p><b>Model:</b> {value.model}</p>
-            <p><b>Price:</b> {value.price}</p>
-            <p><b>Year:</b> {value.year}</p>
+        <div className={'carModel'} key={car.id}>
+            <p><b>Id:</b> {car.id}</p>
+            <p><b>Model:</b> {car.model}</p>
+            <p><b>Price:</b> {car.price}</p>
+            <p><b>Year:</b> {car.year}</p>
         </div>
     );
 }
