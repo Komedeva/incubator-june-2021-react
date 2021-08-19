@@ -1,0 +1,5 @@
+// fetch ()
+export default function usersPage (){
+    return fetch("https://jsonplaceholder.typicode.com/users")
+        .then((value) => value.json())
+}
