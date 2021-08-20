@@ -1,7 +1,7 @@
 function Post ({item}){
     return(
         <div>
-            {item.name}
+            {item.title}
         </div>
     )
 }
