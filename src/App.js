@@ -1,21 +1,23 @@
 import Posts from "./components/Posts";
-import {BrowserRouter as Router,
+import {
+    BrowserRouter as Router,
     Switch,
     Route,
-    Link}
+    Link
+}
     from "react-router-dom";
 
 export default function App() {
     return (
         <Router>
             <div>
-               <Link to={'/post-page'}> Post-page </Link>
+                <Link to={'/post-page'}> Post-page </Link>
             </div>
             <Route path={'posts'} component={'Post'}/>
-
+            <Posts/>
             <Route/>
-        <div>
-        </div>
+            <div>
+            </div>
         </Router>
     );
 }

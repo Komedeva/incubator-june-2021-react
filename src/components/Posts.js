@@ -14,7 +14,7 @@ export default function Posts() {
 
     return (
         <div>
-            {posts && posts.map(value =><Post item= {value} key={value.id}/>)}
+            {posts && posts.map(value =><Post post= {value} key={value.id}/>)}
         </div>
     );
 }

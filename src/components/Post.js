@@ -1,7 +1,7 @@
-function Post ({item}){
+function Post ({post}){
     return(
         <div>
-            {item.title}
+            {post.title}
         </div>
     )
 }
