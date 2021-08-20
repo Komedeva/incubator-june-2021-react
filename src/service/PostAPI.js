@@ -1,7 +1,10 @@
-let url= ('https://jsonplaceholder.typicode.com/posts')
-const getPosts= ()=>{
-    return fetch(url)
-        .then(value => value.json())
+function postsPage (){
+    return fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((value) => value.json())
 }
 
-export {getPosts}
+function postPage (id){
+    return fetch("https://jsonplaceholder.typicode.com/posts" + id)
+        .then(value => value.json())
+}
+export {postsPage, postPage}

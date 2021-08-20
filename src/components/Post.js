@@ -1,7 +1,7 @@
 function Post ({post}){
     return(
         <div>
-            {post.title}
+            {post.title} - <Link> </Link>
         </div>
     )
 }

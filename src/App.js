@@ -1,4 +1,4 @@
-import Posts from "./components/Posts";
+import {Posts} from "./components/Posts";
 import {
     BrowserRouter as Router,
     Switch,
@@ -14,7 +14,6 @@ export default function App() {
                 <Link to={'/post-page'}> Post-page </Link>
             </div>
             <Route path={'posts'} component={'Post'}/>
-            <Posts/>
             <Route/>
             <div>
             </div>
