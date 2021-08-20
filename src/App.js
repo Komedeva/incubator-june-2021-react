@@ -1,7 +1,9 @@
+import Posts from "./components/Posts";
+
 export default function App() {
-  return (
-    <div>
-      App
-    </div>
-  );
+    return (
+        <div>
+            <Posts/>
+        </div>
+    );
 }
