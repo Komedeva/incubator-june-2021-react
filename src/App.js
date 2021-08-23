@@ -7,6 +7,7 @@ import './App.css';
 export default function App() {
     return (
         <Router>
+            {/*<button type="button" className="button is-primary is-light">aboba</button>*/}
             <div className={'link'}>
                 <Link to={'/'}><h3>HOME</h3></Link>
                 <Link to={'/usersPage'}> <h3>Users </h3></Link>
@@ -15,18 +16,18 @@ export default function App() {
                 <br/>
             </div>
 
-            <div className={'userPage'}>
+            <div className={'userPage table'}>
                 <Route path={'/usersPage'}>
                     <Users/>
                 </Route>
             </div>
 
-            <div>
+            <div className={'table'}>
                 <Route path={'/postsPage'}>
                 <Posts/>
             </Route>
         </div>
-            <div>
+            <div className={'table'}>
                 <Route path={'/commentsPage'}>
                     <Comments/>
                 </Route>
