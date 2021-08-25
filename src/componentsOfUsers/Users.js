@@ -3,7 +3,6 @@ import {usersPage} from "../service/API";
 import User from './User';
 import {Route} from "react-router-dom";
 import {UsersDetails} from "./UsersDetails";
-// import {UsersDetails} from "./UsersDetails";
 
 
 export default function Users(props) {
@@ -18,11 +17,8 @@ export default function Users(props) {
         <div>
             {users.map(value => <User history={history} key={value.id} user={value}/>)}
             <hr/>
-            <Route path={`${url}/:id`} render={(props) => {
-                return <UsersDetails {...props} />
-            }
-            }/>
+            <Route path={'usersPage/:id'} component={UsersDetails} />
         </div>
-    )
+    );
 }
 

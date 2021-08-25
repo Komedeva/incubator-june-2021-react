@@ -1,14 +1,16 @@
-import {withRouter} from "react-router";
+import {UsersDetails} from "./UsersDetails";
+import {Route} from "react-router-dom";
 
-function User({user, history}) {
+export default function User({user, history}) {
     const navigateTo = () => {
         history.push(`/usersPage/${user.id}`);
     }
     return (
         <div>
             {user.name} - <button onClick={navigateTo}>show details</button>
+            <Route component={UsersDetails}/>
         </div>
     )
 }
 
-export default withRouter(User);
+// export default withRouter(User);
