@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {usersPage} from "../service/API";
 import User from './User';
 import {Route} from "react-router-dom";
-import {UsersDetails} from "./UsersDetails";
+import UserDetails from "./UserDetails";
 
 
 export default function Users(props) {
@@ -17,7 +17,7 @@ export default function Users(props) {
         <div>
             {users.map(value => <User history={history} key={value.id} user={value}/>)}
             <hr/>
-            <Route path={'usersPage/:id'} component={UsersDetails} />
+            <Route path={'usersPage/:id'} component={UserDetails} />
         </div>
     );
 }
