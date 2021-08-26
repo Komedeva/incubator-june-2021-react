@@ -4,8 +4,8 @@ import {
     Link
 }
     from "react-router-dom";
-import Posts from "./componentsOfPosts/Posts";
-import Users from "./componentsOfUsers/Users";
+import {Posts} from "./posts/Posts";
+import {Users} from "./user/Users";
 
 export default function App() {
     return (
