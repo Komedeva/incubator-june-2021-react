@@ -1,13 +1,15 @@
-import {BrowserRouter as Router, Switch, Link, Route, withRouter} from "react-router-dom";
-import {Users} from "./user/Users";
-import {Posts} from './posts/Posts'
-import {Comments} from "./comments/Comments";
-import './App.css';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+}
+    from "react-router-dom";
+import Posts from "./componentsOfPosts/Posts";
+import Users from "./componentsOfUsers/Users";
 
 export default function App() {
     return (
         <Router>
-            {/*<button type="button" className="button is-primary is-light">aboba</button>*/}
             <div className={'link'}>
                 <Link to={'/'}><h3>HOME</h3></Link>
                 <Link to={'/usersPage'}> <h3>Users </h3></Link>
@@ -15,25 +17,11 @@ export default function App() {
                 <Link to={'/commentsPage'}><h3>Comments</h3> </Link>
                 <br/>
             </div>
-
-            <div className={'userPage table'}>
-                <Route path={'/usersPage'}>
-                    <Users/>
-                </Route>
+            <div>
+                <Route path={'/postsPage'} component={Posts}/>
+                <Route path={'/usersPage'} component={Users}/>
             </div>
-
-            <div className={'table'}>
-                <Route path={'/postsPage'}>
-                <Posts/>
-            </Route>
-        </div>
-            <div className={'table'}>
-                <Route path={'/commentsPage'}>
-                    <Comments/>
-                </Route>
-            </div>
-
-
-</Router>
-);
+        </Router>
+    );
 }
+
