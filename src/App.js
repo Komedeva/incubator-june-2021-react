@@ -1,6 +1,6 @@
 import {DiscoverMovie} from "./service/MovieService";
 import {useEffect} from "react";
-import {Movie} from "./Movie/Movie";
+import {Movie} from "./components/Movie";
 
 export default function App() {
     useEffect(()=> {
@@ -9,7 +9,7 @@ export default function App() {
   return (
     <div>
         <header>
-      App
+      <Movie/>
         </header>
     </div>
   );
