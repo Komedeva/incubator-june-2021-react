@@ -9,7 +9,7 @@ export function Movies() {
     }, []);
     return (
         <div>
-            {movie.map(movie => <Movie key={movie.id} {...movie}/>)}
+            {movie.length>0 && movie.map(movie => <Movie key={movie.id} {...movie}/>)}
         </div>
     );
 }

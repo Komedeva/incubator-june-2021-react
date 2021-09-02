@@ -7,14 +7,14 @@ const instance = axios.create({
     }
 })
 
-const MovieImagesApi = "https://image.tmdb.org/t/p/w1280";
+const MovieImagesApi = "https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg";
 
 // const ImgJson= "https://jsonplaceholder.typicode.com/photos"
-
-function getIMG() {
-    return fetch('https://jsonplaceholder.typicode.com/photos')
-        .then(value => value.json())
-}
+//
+// function getIMG() {
+//     return fetch('https://jsonplaceholder.typicode.com/photos')
+//         .then(value => value.json())
+// }
 
 // "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1"
 // search: "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query="
@@ -22,4 +22,4 @@ function getIMG() {
 
 const DiscoverMovie = async () => await instance.get('/discover/movie')
 
-export {DiscoverMovie, MovieImagesApi, getIMG}
+export {DiscoverMovie, MovieImagesApi}
