@@ -1,7 +1,10 @@
-const Movie=()=>{
+import {MovieImagesApi} from "../service/MovieService";
+
+const Movie=({title, overview, vote_average, poster_path})=>{
     return(
-        <div ClassName="movie">
-   <h1> Hello movie </h1>
+        <div className="movie">
+   <h1> Hello movie</h1>
+            <img
         </div>
     )
 }

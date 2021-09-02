@@ -9,7 +9,7 @@ let [movie, setMovies]= useState([]);
     }, []);
     return(
     <div>
-        {movie.map(value => <Movie key={value.id} post={value}/>)}
+        {movie.map(movie => <Movie key={movie.id} data={movie}/>)}
     </div>
         );
 }
