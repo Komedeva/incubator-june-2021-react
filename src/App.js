@@ -5,15 +5,17 @@ import './App.css'
 // import {Header} from "./components/Header";
 
 export default function App() {
-    useEffect(()=> {
+    useEffect(() => {
         DiscoverMovie().then(value => console.log(value.data))
     }, [])
-  return (
-    <div>
-        <header>
-            {/*<Header/>*/}
-      <Movie/>
-        </header>
-    </div>
-  );
+    return (
+        <div>
+            <header>
+
+                {/*<Header/>*/}
+                <Movie/>
+                {/*<img/>*/}
+            </header>
+        </div>
+    );
 }

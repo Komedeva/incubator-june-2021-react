@@ -8,7 +8,7 @@
 //     }, []);
 //     return(
 //         <div>
-//             {header.map(value => <Header  post={value}/>)}
+//             {header.map(value => <Header  header={value}/>)}
 //         </div>
 //     );
 // }

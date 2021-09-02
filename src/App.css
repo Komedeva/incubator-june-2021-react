@@ -1,9 +1,10 @@
-body{
+body {
     position: relative;
     width: 1440px;
     height: 2590px;
     background: linear-gradient(119.94deg, #000000 0%, rgba(181, 0, 0, 0.81) 110.98%);;
 }
+
 /*.header{*/
 /*    position: absolute;*/
 /*    width: 82.88px;*/

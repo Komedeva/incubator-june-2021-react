@@ -8,11 +8,12 @@ const instance = axios.create({
 })
 
 const MovieImagesApi = "https://image.tmdb.org/t/p/w1280";
+
+const ImgJson= "https://jsonplaceholder.typicode.com/photos"
 // "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1"
 // search: "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query="
 
 
-
 const DiscoverMovie = async () => await instance.get('/discover/movie')
 
-export {DiscoverMovie, MovieImagesApi}
+export {DiscoverMovie, MovieImagesApi, ImgJson}
