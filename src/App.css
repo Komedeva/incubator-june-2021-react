@@ -4,8 +4,9 @@ body {
     width: auto;
 }
 .poster > img {
-    /*width: 300px;*/
     border-radius: 20px;
+    box-shadow: 3px 3px 5px
+    rgba(0, 0, 0.3, 0.5);
 }
 .movie{
     display: flex;
@@ -14,8 +15,6 @@ body {
     margin: 10px;
     background:#FFFFFF;
     border-radius: 20px;
-    /*width: 240px;*/
-    /*height: 350px;*/
     padding: 10px 20px 40px;
 }
 .movieContainer{
@@ -36,10 +35,14 @@ body {
     font-size: 21px;
     line-height: 26px;
     background: black;
+    display: flex;
 }
 
 .movie-info{
     display: flex;
     flex-flow: column;
     align-content: center;
+}
+.search{
+    border-radius: 2px;
 }
