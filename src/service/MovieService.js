@@ -7,7 +7,7 @@ const instance = axios.create({
     }
 })
 
-const MovieImagesApi = "kqjL17yufvn9OVLyXYpvtyrFfak.jpg";
+
 
 // const ImgJson= "https://jsonplaceholder.typicode.com/photos"
 //
@@ -22,4 +22,4 @@ const MovieImagesApi = "kqjL17yufvn9OVLyXYpvtyrFfak.jpg";
 
 const DiscoverMovie = async () => await instance.get('/discover/movie')
 
-export {DiscoverMovie, MovieImagesApi}
+export {DiscoverMovie}

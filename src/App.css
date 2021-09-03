@@ -4,6 +4,7 @@ body {
     width: auto;
 }
 .poster > img {
+    height: 270px;
     border-radius: 20px;
     box-shadow: 3px 3px 5px
     rgba(0, 0, 0.3, 0.5);
