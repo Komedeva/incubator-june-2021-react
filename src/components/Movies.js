@@ -4,12 +4,14 @@ import {Movie} from "./Movie";
 
 export function Movies() {
     let [movie, setMovies] = useState([]);
+
     useEffect(() => {
-        DiscoverMovie().then(data => setMovies([...data]));
+        DiscoverMovie().then(({data}) => setMovies([...data.results]));
     }, []);
+
     return (
         <div>
-            {movie.length>0 && movie.map(movie => <Movie key={movie.id} {...movie}/>)}
+            {movie.length>0 && movie.map(movie => <Movie key={movie.id} movie={movie}/>)}
         </div>
     );
 }

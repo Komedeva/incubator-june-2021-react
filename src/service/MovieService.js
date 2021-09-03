@@ -7,7 +7,7 @@ const instance = axios.create({
     }
 })
 
-const MovieImagesApi = "https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg";
+const MovieImagesApi = "kqjL17yufvn9OVLyXYpvtyrFfak.jpg";
 
 // const ImgJson= "https://jsonplaceholder.typicode.com/photos"
 //
