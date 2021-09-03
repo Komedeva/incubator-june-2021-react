@@ -1,8 +1,8 @@
 import {DiscoverMovie} from "./service/MovieService";
 import {useEffect} from "react";
-import {Movies} from "./components/Movies";
+import {Movies} from "./components/moviesListCard/Movies";
 import './App.css'
-// import {Header} from "./components/Header";
+import {Header} from "./components/header/Header";
 
 export default function App() {
     // useEffect(() => {
@@ -12,11 +12,10 @@ export default function App() {
     return (
         <div>
             <header>
-
-                {/*<Header/>*/}
+                <Header/>
+            </header>
                 <Movies/>
                 {/*<img/>*/}
-            </header>
         </div>
     );
 }
