@@ -4,6 +4,7 @@ import {Movies} from "./components/moviesListCard/Movies";
 import './App.css'
 import {Header} from "./components/header/Header";
 import {Route, Router} from "react-router";
+import Star from "./components/starsRating/Star";
 
 
 export default function App() {
@@ -12,7 +13,8 @@ export default function App() {
             <header>
                 <Header/>
             </header>
-                <Movies/>
+            <Movies/>
+            <Star/>
 
         </div>
     );

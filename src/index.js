@@ -9,13 +9,20 @@ import {DiscoverMovie} from "./service/MovieService";
 
 let initialState = {
     moviesPages: {},
-    genres: []
+    genres: [],
+    stars: {}
 };
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case "PUT":
-        return {...state, moviesPages: {...action.payload}};
+            return {...state, moviesPages: {...action.payload}};
+        case "GET_GENRE":
+            return {...state, genres: {...action.payload}};
+
+        // case "STARS_RATING": {
+        //     return {...state, stars: {...action.payload}}
+        // }
 
         default:
             return state;
@@ -25,6 +32,13 @@ export const putMoviesPages = (payload) => {
     return {type: "PUT", payload};
 };
 
+export const getGenres = (payload) => {
+    return {type: "GET_GENRE", payload};
+};
+
+// export const getStars = (payload) => {
+//     return{type:"STARS_RATING", payload};
+// };
 
 let store = createStore(reducer);
 // store.dispatch({})

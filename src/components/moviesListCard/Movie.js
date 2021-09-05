@@ -1,7 +1,7 @@
 import './../../App.css'
 
 const Movie = ({movie}) => {
-    const {title, overview, vote_average, poster_path} = movie;
+    const {title, overview, poster_path} = movie;
 
     return (
         <div className="movie">
