@@ -1,5 +1,5 @@
-function GenresUrl= ()=> {
-
-    'https://api.themoviedb.org/3/genre/movie/list'
+function GetGenres() {
+return fetch('https://api.themoviedb.org/3/genre/movie/list')
+    .then(value => value.json())
 }
-// import {G}
+export {GetGenres};

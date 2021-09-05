@@ -5,6 +5,7 @@ import './App.css'
 import {Header} from "./components/header/Header";
 import {Route, Router} from "react-router";
 import Star from "./components/starsRating/Star";
+import {Genre} from "./components/genres/Genre";
 
 
 export default function App() {
@@ -14,7 +15,8 @@ export default function App() {
                 <Header/>
             </header>
             <Movies/>
-            <Star/>
+            {/*<Star/>*/}
+            <Genre/>
 
         </div>
     );
