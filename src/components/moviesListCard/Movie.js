@@ -2,13 +2,12 @@ import './../../App.css'
 
 const Movie = ({movie}) => {
     const {title, overview, vote_average, poster_path} = movie;
-    console.log(movie);
 
     return (
         <div className="movie">
 
             <div className='poster'>
-            <img src={"https://image.tmdb.org/t/p/w200/" + poster_path} alt={title}/>
+            <img src={"https://image.tmdb.org/t/p/w300/" + poster_path} alt={title}/>
             </div>
 
             <div className='movie-info'>
