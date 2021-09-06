@@ -20,9 +20,9 @@ const reducer = (state = initialState, action) => {
         case "GET_GENRE":
             return {...state, genres: {...action.payload}};
 
-        // case "STARS_RATING": {
-        //     return {...state, stars: {...action.payload}}
-        // }
+        case "STARS_RATING": {
+            return {...state, stars: {...action.payload}}
+        }
 
         default:
             return state;
