@@ -5,43 +5,27 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createStore} from "redux";
 import {Provider} from "react-redux";
-import {DiscoverMovie} from "./service/MovieService";
 
 let initialState = {
-    moviesPages: {},
+    moviesPages: [],
     genres: [],
-    stars: {}
 };
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case "PUT":
-            return {...state, moviesPages: {...action.payload}};
-        case "GET_GENRE":
-            return {...state, genres: {...action.payload}};
+            return {...state, moviesPages: [...action.payload]};
 
-        case "STARS_RATING": {
-            return {...state, stars: {...action.payload}}
-        }
+        case "GET_GENRE":
+            console.log(action.payload)
+            return {...state, genres: [...action.payload]};
 
         default:
             return state;
     }
 }
-export const putMoviesPages = (payload) => {
-    return {type: "PUT", payload};
-};
-
-export const getGenres = (payload) => {
-    return {type: "GET_GENRE", payload};
-};
-
-// export const getStars = (payload) => {
-//     return{type:"STARS_RATING", payload};
-// };
 
 let store = createStore(reducer);
-// store.dispatch({})
 
 ReactDOM.render(
     <React.StrictMode>

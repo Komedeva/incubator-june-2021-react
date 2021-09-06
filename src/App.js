@@ -3,11 +3,8 @@ import {useEffect} from "react";
 import {Movies} from "./components/moviesListCard/Movies";
 import './App.css'
 import {Header} from "./components/header/Header";
-import {Route, Router} from "react-router";
-import Star from "./components/starsRating/Star";
 import {Genre} from "./components/genres/Genre";
 import {useDispatch, useSelector} from "react-redux";
-import {MyComponent} from './components/starsRating'
 
 
 export default function App() {
@@ -19,9 +16,7 @@ export default function App() {
                 <Header/>
             </header>
             <Movies/>
-            {/*<Star/>*/}
-            {/*<Rating/>*/}
-            <Genre/>
+            {/*<Genre/>*/}
 
         </div>
     );

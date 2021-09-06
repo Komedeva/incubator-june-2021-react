@@ -1,8 +1,14 @@
-function Genre({genre}){
-    // const {genre_ids}= genre;
+import {useSelector} from "react-redux";
+
+function Genre({genre_ids}){
+    let genre = useSelector(({genres})=>genres);
+    const genresIds = genre_ids.join(',')
+    const genresName = genre.filter(value=>genresIds.indexOf(value.id)!==-1)
     return(
         <div>
-            {genre}
+            {
+                genresName.map(value=><div>{value.name}</div>)
+            }
         </div>
     )
 }
