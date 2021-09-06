@@ -22,8 +22,21 @@
 
 import {GetGenres} from "./GenresService";
 import {useSelector} from "react-redux";
+import {getGenres} from "../../index";
+import {useEffect} from "react";
+import {Genre} from "./Genre";
 
 export function Genres() {
-    const genres = useSelector()
-})
-GetGenres
+    const genres = useSelector(({getGenres})=> getGenres.results);
+    const dispatch = (useDispatch)();
+    console.log(genres);
+    useEffect(()=> {
+        GetGenres().then(({data})=>dispatch(getGenres(data)));
+    },[]);
+    return(
+        <div className='genres'>
+            {genres.map(genre=><Genre genre={genre}/>)}
+        </div>
+    );
+}
+// Genres
