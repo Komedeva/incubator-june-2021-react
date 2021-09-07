@@ -1,5 +1,4 @@
 import './../../App.css'
-import {Genre} from "../genres/Genre";
 import {Genres} from "../genres/Genres";
 
 const Movie = ({movie}) => {

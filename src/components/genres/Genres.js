@@ -1,4 +1,4 @@
-import {useSelector, useDispatch} from "react-redux";
+import {useSelector} from "react-redux";
 import {Genre} from "./Genre";
 
  function Genres({genre_ids}) {
