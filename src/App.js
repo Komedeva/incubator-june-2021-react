@@ -3,7 +3,6 @@ import {useEffect} from "react";
 import {Movies} from "./components/moviesListCard/Movies";
 import './App.css'
 import {Header} from "./components/header/Header";
-import {Genre} from "./components/genres/Genre";
 import {useDispatch, useSelector} from "react-redux";
 
 
@@ -16,8 +15,6 @@ export default function App() {
                 <Header/>
             </header>
             <Movies/>
-            {/*<Genre/>*/}
-
         </div>
     );
 }

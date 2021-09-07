@@ -1,14 +1,14 @@
 import {useEffect, useState} from "react";
 import {Header} from "./Header";
 
-const MainHeader =()=> {
-    let [header, setHeader]=useState([])
+const MainHeader = () => {
+    let [header, setHeader] = useState([])
     useEffect(() => {
         Header().then(value => setHeader([...value]));
     }, []);
-    return(
+    return (
         <div>
-            {header.map(value => <Header  header={value}/>)}
+            {header.map(value => <Header header={value}/>)}
         </div>
     );
 }

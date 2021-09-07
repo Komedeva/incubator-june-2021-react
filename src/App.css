@@ -17,6 +17,7 @@ body {
     background:#FFFFFF;
     border-radius: 20px;
     padding: 10px 20px 40px;
+
 }
 .movieContainer{
     margin: 10px;
@@ -48,3 +49,16 @@ body {
     border-radius: 2px;
 }
 
+.star-rating{
+    /*display: flex;*/
+    /*margin: 2px;*/
+}
+
+.star{
+    height: 17px;
+    width: 17px;
+    padding-top: 1px;
+}
+.title{
+    width: 200px;
+}
