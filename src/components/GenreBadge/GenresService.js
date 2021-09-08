@@ -7,4 +7,5 @@ function GetGenres() {
         .then(value => value.json())
 }
 
+
 export {GetGenres};

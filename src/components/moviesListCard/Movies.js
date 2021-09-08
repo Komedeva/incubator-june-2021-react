@@ -3,13 +3,13 @@ import {useEffect} from "react";
 import {Movie} from "./Movie";
 import './../../App.css'
 import {useDispatch, useSelector} from "react-redux";
-import {GetGenres} from "../genres/GenresService";
+import {GetGenres} from "../GenreBadge/GenresService";
 import {getGenre, put} from "../ActionsCreator";
+import {Genre} from "../GenreBadge/Genre";
 
 export function Movies() {
     const movies = useSelector(({moviesPages}) => moviesPages);
     const dispatch = useDispatch();
-
 
     useEffect(() => {
         DiscoverMovie().then(value => dispatch(put(value.data.results)));
