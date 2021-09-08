@@ -1,6 +1,7 @@
 import './../../App.css'
 import {Genre} from "../GenreBadge/Genre";
 import {Link} from "react-router-dom";
+import ReactStars from "react-rating-stars-component";
 
 const Movie = ({movie}) => {
     console.log(movie)
@@ -9,12 +10,11 @@ const Movie = ({movie}) => {
 
         <div className="movie" >
 
-        <Link to ={`/MovieInfo/${movie.id}`}>
+        {/*<Link to ={`/MovieInfo/${movie.id}`}>*/}
+            <Link className={'link'} to={{pathname: /MovieInfo/`${movie.id}`, state: movie }}>
             <div className='poster'>
                 <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt=''/>
             </div>
-        </Link>
-
             <div className='movie-info'>
                 <h2 className='title'>{movie.title}</h2>
                 <p className='star-rating'>
@@ -28,8 +28,10 @@ const Movie = ({movie}) => {
 
                     <div className='overview'>
                         <div><h1>Overview:</h1> </div>  {movie.overview}</div>
+
                 </div>
             </div>
+        </Link>
         </div>
     )
 }

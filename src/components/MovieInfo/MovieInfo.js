@@ -1,8 +1,9 @@
-export default function MovieInfo ({movie}) {
+ export function MovieInfo ({movie}) {
     return(
         <div>
-            {movie.title}
-            {movie}
+            {/*{movie.title}*/}
+            {/*{movie.title}*/}
+            njsxkxaxmnc szkxa
     </div>
     )
 }

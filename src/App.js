@@ -4,7 +4,7 @@ import {Header} from "./components/header/Header";
 import {useDispatch, useSelector} from "react-redux";
 import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 import {Movie} from "./components/moviesListCard/Movie";
-
+import {MovieInfo} from "./components/MovieInfo/MovieInfo";
 
 export default function App() {
     let state = useSelector(state => state)
@@ -12,15 +12,15 @@ export default function App() {
     return (
         <Router>
             <Switch>
-                <Route exact path={'/searchMovie'} component={Movie}/>
+                <Route path={'/MovieInfo/:id'} component={Movie}/>
                 <div>
                     <header>
                         <Header/>
-                        <Link to={'/MovieInfo'}>
+                        {/*<Link to={'/MovieInfo'}>*/}
                         <Movies/>
-                        </Link>
+                        {/*</Link>*/}
                     </header>
-                    <Route path={'/MovieInfo'} />
+                    <Route path={'/searchMovie'} component={MovieInfo}/>
                 </div>
 
             </Switch>
