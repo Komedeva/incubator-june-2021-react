@@ -16,9 +16,11 @@ export default function App() {
                 <div>
                     <header>
                         <Header/>
-                        <Link to={'/MovieInfo'}> </Link>
+                        <Link to={'/MovieInfo'}>
                         <Movies/>
+                        </Link>
                     </header>
+                    <Route path={'/MovieInfo'} />
                 </div>
 
             </Switch>
@@ -26,3 +28,20 @@ export default function App() {
 
     )
 };
+// export default function App() {
+//     return (
+//         <Router>
+//             <div className={'link'}>
+//                 <Link to={'/'}><h3>HOME</h3></Link>
+//                 <Link to={'/usersPage'}> <h3>Users </h3></Link>
+//                 <Link to={'/postsPage'}> <h3>Posts</h3> </Link>
+//                 <Link to={'/commentsPage'}><h3>Comments</h3> </Link>
+//                 <br/>
+//             </div>
+//             <div>
+//                 <Route path={'/postsPage'} component={Posts}/>
+//                 <Route path={'/usersPage'} component={Users}/>
+//             </div>
+//         </Router>
+//     );
+// }

@@ -1,20 +1,19 @@
 import './../../App.css'
-import {Genres} from "../GenreBadge/Genres";
 import {Genre} from "../GenreBadge/Genre";
+import {Link} from "react-router-dom";
 
 const Movie = ({movie}) => {
-// const Change (e)=>{
-//     onclick()
-//     }
-    const OpenNewPage(e){
+    console.log(movie)
 
-    }
     return (
-        <div className="movie" onClick= OpenNewPage()>
 
+        <div className="movie" >
+
+        <Link to ={`/MovieInfo/${movie.id}`}>
             <div className='poster'>
                 <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt=''/>
             </div>
+        </Link>
 
             <div className='movie-info'>
                 <h2 className='title'>{movie.title}</h2>
@@ -26,6 +25,9 @@ const Movie = ({movie}) => {
                 </p>
                 <div className='genrestyle'>
                     <Genre genre_ids={movie.genre_ids}/>
+
+                    <div className='overview'>
+                        <div><h1>Overview:</h1> </div>  {movie.overview}</div>
                 </div>
             </div>
         </div>
