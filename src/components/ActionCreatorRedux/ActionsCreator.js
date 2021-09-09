@@ -1,4 +1,4 @@
-import {GET_GENRE, PUT, GET_ONE_MOVIE} from "../Actions";
+import {GET_GENRE, PUT, GET_ONE_MOVIE} from "./Actions";
 
 const put=(payload)=>{
     return{type:PUT, payload}

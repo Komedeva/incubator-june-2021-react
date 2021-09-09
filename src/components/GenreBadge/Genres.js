@@ -1,7 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import {Genre} from "./Genre";
 import {useEffect} from "react";
-import {getGenre} from "../ActionsCreator";
+import {getGenre} from "../ActionCreatorRedux/ActionsCreator";
 import {GetGenres} from "./GenresService";
 
 function Genres({genre_ids}) {

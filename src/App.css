@@ -1,6 +1,6 @@
 body {
     position: relative;
-    background: linear-gradient(119.94deg, #000000 0%, rgba(181, 0, 0, 0.81) 110.98%);;
+    background: linear-gradient(119.94deg, #000000 0%, rgba(181, 0, 0, 0.81) 110.98%);
     width: auto;
 }
 .poster > img {
@@ -19,7 +19,6 @@ body {
     padding: 10px 20px 40px;
     position: relative;
     overflow: hidden;
-
 }
 .movieContainer{
     margin: 10px;
@@ -103,11 +102,6 @@ body {
     box-shadow: 3px 3px 5px
 }
 
-/*.mainHeader{*/
-/*    display: flex;*/
-/*    !*justify-content: center;*!*/
-/*    padding: 20px;*/
-/*}*/
 .logo{
 
 }
@@ -121,5 +115,12 @@ body {
 }
 .header{
     display: flex;
-
+}
+.whiteTheme{
+    Background: #DAE0D1;
+    color-text: black
+}
+.darkTheme {
+    Background: linear-gradient(119.94deg, #000000 0%, rgba(181, 0, 0, 0.81) 110.98%);;
+    text-color: white;
 }

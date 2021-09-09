@@ -14,16 +14,6 @@ const Header = () => {
                 </svg>
 
             </div>
-
-
-             {/*<input type="search" placeholder="Search..."/>*/}
-
-            {/*<div className='user'>*/}
-            {/* <img*/}
-            {/* src={`http://promin.cv.ua/uploads/posts/2017-02/1487260797_16583951_172813146542834_1953993391335276544_n.jpg`}*/}
-            {/* alt=''/>*/}
-            {/*</div>*/}
-
         </div>
     )
 }

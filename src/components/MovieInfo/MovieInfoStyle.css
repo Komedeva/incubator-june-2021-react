@@ -1,0 +1,20 @@
+.MovieInfo{
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+.MoviesInfoImg img{
+    height: 530px;
+    width: 400px;
+    border-radius: 15px;
+}
+.star-rating2{
+    margin-left: 48%;
+}
+.genrestyle2{
+    margin-left: 48%;
+}
+.over{
+    width: 500px;
+    margin-left: 33%;
+}

@@ -10,7 +10,9 @@ import {MoviesInfo} from './components/MovieInfo/MoviesInfo'
 export default function App() {
     let state = useSelector(state => state)
     let dispatch = useDispatch();
+
     return (
+
         <Router>
             <Switch>
                 <Route path={'/MovieInfo/:id'} component={MoviesInfo}/>

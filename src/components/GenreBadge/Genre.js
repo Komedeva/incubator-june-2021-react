@@ -4,7 +4,6 @@ function Genre({genre_ids}) {
     let genre = useSelector(({genres}) => genres);
     const genresIds = genre_ids.join(',');
     const genresName = genre.filter(value => genresIds.indexOf(value.id) !== -1)
-    console.log(genre_ids)
     return (
         <div>
             {

@@ -8,7 +8,6 @@ const instance = axios.create({
 })
 
 
-
 const DiscoverMovie = async () => await instance.get('/discover/movie')
 
 export {DiscoverMovie}
