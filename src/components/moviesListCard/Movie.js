@@ -4,6 +4,7 @@ import {Link, useHistory} from "react-router-dom";
 import {MovieInfo} from "../MovieInfo/MoviesInfo";
 
 const Movie = ({movie}) => {
+
     // console.log(movie)
     // const history = useHistory()
     return (
@@ -24,6 +25,7 @@ const Movie = ({movie}) => {
 
                 <div className='movie-info'>
             <Link className={'link'} to={{pathname:`/MovieInfo/${movie.id}`, state: movie}}>
+
                     <h2 className='title'>
                         {movie.title} </h2>
             </Link>
