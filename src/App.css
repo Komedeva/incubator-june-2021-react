@@ -116,11 +116,11 @@ body {
 .header{
     display: flex;
 }
-.whiteTheme{
-    Background: #DAE0D1;
-    color-text: black
-}
-.darkTheme {
-    Background: linear-gradient(119.94deg, #000000 0%, rgba(181, 0, 0, 0.81) 110.98%);;
-    text-color: white;
-}
+/*.whiteTheme{*/
+/*    Background: #DAE0D1;*/
+/*    color-text: black*/
+/*}*/
+/*.darkTheme {*/
+/*    Background: linear-gradient(119.94deg, #000000 0%, rgba(181, 0, 0, 0.81) 110.98%);;*/
+/*    text-color: white;*/
+/*}*/

@@ -1,13 +1,10 @@
 import './../../App.css'
 import {Genre} from "../GenreBadge/Genre";
 import {Link,} from "react-router-dom";
-import {Pagination} from './../userInfo/user'
 
 const Movie = ({movie}) => {
 
     return (
-
-        // <div className='darkTheme'>
             <div className="movie">
 
                 <Link className={'link'} to={{pathname: `/MovieInfo/${movie.id}`, state: movie}}>
@@ -34,12 +31,9 @@ const Movie = ({movie}) => {
                             <div className='overview'>
                                 <div><h1>Overview:</h1></div>
                                 {movie.overview}</div>
-                            <Pagination
-                                movie={movie.length}/>
                         </div>
                     </div>
                 </Link>
-            {/*</div>*/}
         </div>
 
     )
