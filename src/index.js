@@ -9,6 +9,7 @@ import {Provider} from "react-redux";
 let initialState = {
     moviesPages: [],
     genres: [],
+    movieInfo: []
 };
 
 const reducer = (state = initialState, action) => {
@@ -19,6 +20,9 @@ const reducer = (state = initialState, action) => {
         case "GET_GENRE":
             console.log(action.payload)
             return {...state, genres: [...action.payload]};
+
+        case "GET_ONE_MOVIE":
+            return {...state, movieInfo:[...action.payload]}
 
         default:
             return state;

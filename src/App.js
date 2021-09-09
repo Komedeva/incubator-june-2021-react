@@ -5,6 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 import {Movie} from "./components/moviesListCard/Movie";
 import {MovieInfo} from "./components/MovieInfo/MovieInfo";
+import {MoviesInfo} from './components/MovieInfo/MoviesInfo'
 
 export default function App() {
     let state = useSelector(state => state)
@@ -12,15 +13,13 @@ export default function App() {
     return (
         <Router>
             <Switch>
-                <Route path={'/MovieInfo/:id'} component={Movie}/>
+                <Route path={'/MovieInfo/:id'} component={MoviesInfo}/>
                 <div>
                     <header>
                         <Header/>
-                        {/*<Link to={'/MovieInfo'}>*/}
                         <Movies/>
-                        {/*</Link>*/}
                     </header>
-                    <Route path={'/searchMovie'} component={MovieInfo}/>
+                    <Route path={'/searchMovie'} component={Movie}/>
                 </div>
 
             </Switch>
@@ -28,20 +27,3 @@ export default function App() {
 
     )
 };
-// export default function App() {
-//     return (
-//         <Router>
-//             <div className={'link'}>
-//                 <Link to={'/'}><h3>HOME</h3></Link>
-//                 <Link to={'/usersPage'}> <h3>Users </h3></Link>
-//                 <Link to={'/postsPage'}> <h3>Posts</h3> </Link>
-//                 <Link to={'/commentsPage'}><h3>Comments</h3> </Link>
-//                 <br/>
-//             </div>
-//             <div>
-//                 <Route path={'/postsPage'} component={Posts}/>
-//                 <Route path={'/usersPage'} component={Users}/>
-//             </div>
-//         </Router>
-//     );
-// }

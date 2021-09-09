@@ -96,8 +96,24 @@ body {
     right: 0;
     padding: 15px;
     transform: translateX(100%);
+    height: 200px;
 }
 .movie:hover .overview{
     transform: translateX(0%);
     box-shadow: 3px 3px 5px
 }
+
+.mainHeader{
+    display: flex;
+    /*justify-content: center;*/
+    padding: 20px;
+}
+.logo{
+    padding-left: 10px;
+    height: 10px;
+    weight: 10px ;
+}
+.user img{
+    display: block;
+}
+

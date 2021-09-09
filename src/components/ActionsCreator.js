@@ -1,4 +1,4 @@
-import {GET_GENRE, PUT} from "../Actions";
+import {GET_GENRE, PUT, GET_ONE_MOVIE} from "../Actions";
 
 const put=(payload)=>{
     return{type:PUT, payload}
@@ -6,4 +6,8 @@ const put=(payload)=>{
 const getGenre=(payload)=>{
     return {type: GET_GENRE, payload}
 }
-export {put, getGenre}
+
+const getOneMovie=(payload)=>{
+    return {type: GET_ONE_MOVIE, payload}
+}
+export {put, getGenre, getOneMovie}
